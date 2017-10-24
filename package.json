@@ -24,6 +24,7 @@
     "webpack-dev-server": "^2.8.2"
   },
   "dependencies": {
+    "firebase": "^4.6.0",
     "materialize-css": "^0.100.2",
     "page": "^1.7.1",
     "sass-loader": "^6.0.6"
