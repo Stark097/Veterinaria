@@ -19,10 +19,10 @@ const templateDetalle = (invent) => {
               <p><strong>Id:</strong> ${invent.id}</p>
               <p><strong>Nombre:</strong> ${invent.name}</p>
               <p><strong>Cantidad:</strong> ${invent.cantidad}</p>
-              <p><strong>precio:</strong> ${invent.precio}</p>
-              <p><strong>precio:</strong> ${invent.fecha_Vencimiento}</p>
-              <p><strong>precio:</strong> ${invent.descripcion}</p>
-              <p><strong>precio:</strong> ${invent.marca}</p>
+              <p><strong>Precio:</strong> ${invent.precio}</p>
+              <p><strong>Fecha de Vencimiento:</strong> ${invent.fecha_Vencimiento}</p>
+              <p><strong>Descripcion:</strong> ${invent.descripcion}</p>
+              <p><strong>Marca:</strong> ${invent.marca}</p>
             </div>
           </div>
         </div>
