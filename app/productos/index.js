@@ -10,6 +10,8 @@ if (!firebase.apps.length) {
 	firebase.initializeApp(config) 
 }
 
+
+
 var db = firebase.database()
 
 function obtenerDatos (datos) {
