@@ -1,14 +1,14 @@
 const template = (datos) => {
   let rows = ''
-  let countRow = 0
+  let countRow = 1
   let keys = Object.keys(datos)
 
 	keys.map(key => {
     let item = datos[key]
     rows +=  `
      <tr>
-      <td>${countRow++}</td>
-      <td><a href="/detalles/${key}">${item.nombre}</a></td>
+      <!--<td>${countRow++}</td>-->
+      <td><a href="/detalles/${key}">${item.name}</a></td>
       <td>${item.cantidad}$</td>
       <td>${item.precio}$</td>
     </tr>
@@ -19,7 +19,7 @@ const template = (datos) => {
   <table class="striped">
     <thead>
       <tr>
-        <th>#</th>
+        <!--<th>#</th>-->
         <th>Nombre</th>
         <th>Cantidad</th>
         <th>precio</th>

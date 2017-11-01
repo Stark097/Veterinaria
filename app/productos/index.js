@@ -98,7 +98,7 @@ function obtenerDatos (datos) {
 	main.innerHTML = layout(html)
 }
 
-db.ref('inventario').once('value').then(obtenerDatos)
+db.ref('Productos').once('value').then(obtenerDatos)
 })
 
 function mostrarLoader (ctx, next) {

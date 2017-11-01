@@ -1,11 +1,10 @@
 const config = {
-  
-    apiKey: "AIzaSyCh6QdiVHk3LuiY5b_zARVwCgiqy4aRyKY",
-    authDomain: "prueba-5c26e.firebaseapp.com",
-    databaseURL: "https://prueba-5c26e.firebaseio.com",
-    projectId: "prueba-5c26e",
-    storageBucket: "prueba-5c26e.appspot.com",
-    messagingSenderId: "128290886921"
+ 	apiKey: "AIzaSyDxPa-Pd2jsVimBRwwDRcigF7K42c8leCA",
+    authDomain: "bd-veterinaria.firebaseapp.com",
+    databaseURL: "https://bd-veterinaria.firebaseio.com",
+    projectId: "bd-veterinaria",
+    storageBucket: "bd-veterinaria.appspot.com",
+    messagingSenderId: "414230109868"
   
   }
 
