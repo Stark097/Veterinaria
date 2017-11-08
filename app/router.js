@@ -5,6 +5,7 @@ import contacto from './contacto'
 import acercade from './acercade'
 require('./productos')
 require('./detalles')
+require('./guardar')
 
 
 const main = document.querySelector('main')
