@@ -7,6 +7,7 @@ const menu = `
         <li><a href="/acercade">Acerca de</a></li>
         <li><a href="/contacto">Contacto</a></li>
         <li><a href="/productos">Productos</a></li>
+        <li><a href="/login">Iniciar Sesion</a></li>
       </ul>
     </div>
   </nav>
