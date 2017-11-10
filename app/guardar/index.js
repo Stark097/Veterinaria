@@ -14,7 +14,7 @@ var db = firebase.database()
 page('/guardar', mostrarLoader, function () {
 	var main = document.querySelector('main')
 
-  //main.innerHTML = layout(formTemplate)
+  main.innerHTML = layout(formTemplate)
   var guardarBtn = document.querySelector('#guardar')
   guardarBtn.addEventListener('click', guardar)
 
@@ -30,11 +30,11 @@ var db = firebase.database()
 function obtenerDatos (datos) {
   var arrayDatos = datos.val()
 
-  var main = document.querySelector('main')
+  var main = document.querySelector('#ver123')
 
   var html =  templateLista(arrayDatos)
   
-  main.innerHTML = layout(formTemplate+html)
+  main.innerHTML = html
 }
 
 db.ref('Productos').once('value').then(obtenerDatos)
@@ -52,11 +52,11 @@ var formTemplate = `  <div class="row">
         </div>
         <div class="input-field col s3">
           <input id="marca" type="text" class="validate">
-          <label for="Marca">Marca</label>
+          <label for="marca">Marca</label>
         </div>
         <div class="input-field col s3">
           <input id="precio" type="text" class="validate">
-          <label for="Precio">Precio</label>
+          <label for="precio">Precio</label>
         </div>        
         <div class="input-field col s3">
           <input id="vencimiento" type="text" class="validate">
@@ -84,7 +84,15 @@ var formTemplate = `  <div class="row">
             </div>
           </div>
       </div>      
-      <a id="guardar" class="waves-effect waves-light btn">Guardar</a>
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="id" type="text" class="validate">
+          <label for="id">id</label>
+        </div>
+        <div class="input-field col s6">
+          <a id="guardar" class="waves-effect waves-light btn">Guardar</a>
+        </div>
+      </div>      
     </form>
   </div>
   </div>
@@ -107,12 +115,16 @@ function guardar (e)  {
 		var ref = db.ref("Productos")
 		ref.push({
 			name: document.querySelector('#nombre').value,
-			marca: document.querySelector('#apellido').value,
-			precio: document.querySelector('#edad').value,
+			marca: document.querySelector('#marca').value,
+			precio: document.querySelector('#precio').value,
+      fecha_Vencimiento: document.querySelector('#vencimiento').value,
+      descripcion: document.querySelector('#descripcion').value,
+      cantidad: document.querySelector('#cantidad').value,
+      id: document.querySelector('#id').value,
 			avatar: imgURL
 		})
 
-		page.redirect('/homepage')
+		//page.redirect('/homepage')
 
 
 	})
