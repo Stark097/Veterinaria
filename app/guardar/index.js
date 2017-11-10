@@ -96,6 +96,7 @@ var formTemplate = `  <div class="row">
     </form>
   </div>
   </div>
+  <div id="ver123"></div>
   `
 
 var fileSelected = null
@@ -121,7 +122,7 @@ function guardar (e)  {
       descripcion: document.querySelector('#descripcion').value,
       cantidad: document.querySelector('#cantidad').value,
       id: document.querySelector('#id').value,
-			avatar: imgURL
+			img: imgURL
 		})
 
 		//page.redirect('/homepage')
