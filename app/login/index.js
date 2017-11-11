@@ -31,7 +31,7 @@ var template = `
 page('/login', () => {
 	var main = document.querySelector('main')
 
-  main.innerHTML = template
+  main.innerHTML = layout(template)
 
   var btnLogin = document.querySelector('#googleLogin')
   if (btnLogin) btnLogin.addEventListener('click', login)
