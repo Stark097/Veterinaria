@@ -1,3 +1,4 @@
+
 const templateDetalle = (invent) => {
   return `
       <div class="row">
@@ -25,9 +26,27 @@ const templateDetalle = (invent) => {
               <p><strong>Marca:</strong> ${invent.marca}</p>
             </div>
           </div>
+          <a id="eliminar" key="${invent.id}" class="waves-effect waves-light btn">Eliminar</a>
+          <a class="waves-effect waves-light btn"  id="actualizar" class ="button"
+                    key="${invent.id}"
+                    descripcion="${invent.name}"
+                    fecha_alta="${invent.cantidad}"
+                    genero="${invent.precio}"
+                    identificador="${invent.fecha_Vencimiento}"
+                    nombre="${invent.descripcion}"
+                    precio="${invent.marca}"
+                    url="${invent.img}">Actualizar</a>
         </div>
+        <div class="col s12 m6">
+         <div  id="editar">
+
+         </div>
+        </div>        
       </div>
+
   `
+
 }
 
 module.exports = templateDetalle
+
