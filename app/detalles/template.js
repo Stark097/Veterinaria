@@ -27,20 +27,58 @@ const templateDetalle = (invent) => {
             </div>
           </div>
           <a id="eliminar" key="${invent.id}" class="waves-effect waves-light btn">Eliminar</a>
-          <a class="waves-effect waves-light btn"  id="actualizar" class ="button"
-                    key="${invent.id}"
-                    descripcion="${invent.name}"
-                    fecha_alta="${invent.cantidad}"
-                    genero="${invent.precio}"
-                    identificador="${invent.fecha_Vencimiento}"
-                    nombre="${invent.descripcion}"
-                    precio="${invent.marca}"
-                    url="${invent.img}">Actualizar</a>
+          <a class="waves-effect waves-light btn"  id="actualizar" class ="button" key="${invent.id}" img="${invent.img}">Modificar</a>
         </div>
         <div class="col s12 m6">
-         <div  id="editar">
-
-         </div>
+         <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="nombre" type="text" class="validate">
+          <label for="nombre">Nombre</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="marca" type="text" class="validate">
+          <label for="marca">Marca</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="precio" type="text" class="validate">
+          <label for="precio">Precio</label>
+        </div>        
+        <div class="input-field col s6">
+          <input id="vencimiento" type="text" class="validate">
+          <label for="vencimiento">Fecha Vencimiento</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="descripcion" type="text" class="validate">
+          <label for="descripcion">Descripcion</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="cantidad" type="text" class="validate">
+          <label for="cantidad">Cantidad</label>
+        </div>
+      </div>
+      <div class="row">
+        <!--<div class="col s12">
+          <div class="file-field input-field">
+            <div class="btn">
+              <span>Selecionar Imagen</span>
+              <input type="file" id="file">
+            </div>
+            <div class="file-path-wrapper">
+              <input class="file-path validate" type="text">
+            </div>
+          </div>
+        </div>
+      </div>-->      
+    </form>
+  </div>
+  </div>
+  <div id="ver123"></div>
         </div>        
       </div>
 
@@ -50,3 +88,5 @@ const templateDetalle = (invent) => {
 
 module.exports = templateDetalle
 
+
+                    

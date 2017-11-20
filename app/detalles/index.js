@@ -5,10 +5,10 @@ var firebase = require('firebase')
 var templateDetalle = require('./template')
 
 
-page('/detalles/:name', mostrarLoader, function (ctx, next) {  
+page('/detalles/:name', mostrarLoader, function (ctx, next) {    
 
   if (!firebase.apps.length) { 
-    firebase.initializeApp(config) 
+    firebase.initializeApp(config)     
   }
 
   var db = firebase.database()
@@ -18,13 +18,14 @@ page('/detalles/:name', mostrarLoader, function (ctx, next) {
     let item = snapshot.val()
     var main = document.querySelector('main')
     item.id = ctx.params.name
+
     var html =  templateDetalle(item)   
     main.innerHTML = layout(html)
-    var btn_borrar = document.querySelector('#eliminar')
-    btn_borrar.addEventListener('click', eliminar)
-    var btn_borrar = document.querySelector('#actualizar')
-    btn_borrar.addEventListener('click', actualizar)
-    
+    var btn_elimar = document.querySelector('#eliminar')
+    btn_elimar.addEventListener('click', eliminar)
+    var btn_actualizar = document.querySelector('#actualizar')
+    btn_actualizar.addEventListener('click', update1)        
+      
   })  
 })
 
@@ -67,62 +68,46 @@ var db = firebase.database()
   }
 }
 
-function actualizar () {
-  var html =  `  <div class="row">
-    <form class="col s12">
-      <div class="row">
-        <div class="input-field col s3">
-          <input id="nombre" type="text" class="validate">
-          <label for="nombre">Nombre</label>
-        </div>
-        <div class="input-field col s3">
-          <input id="marca" type="text" class="validate">
-          <label for="marca">Marca</label>
-        </div>
-        <div class="input-field col s3">
-          <input id="precio" type="text" class="validate">
-          <label for="precio">Precio</label>
-        </div>        
-        <div class="input-field col s3">
-          <input id="vencimiento" type="text" class="validate">
-          <label for="vencimiento">Fecha Vencimiento</label>
-        </div>
-      </div>
-       <div class="row">
-        <div class="input-field col s3">
-          <input id="descripcion" type="text" class="validate">
-          <label for="descripcion">Descripcion</label>
-        </div>
-        <div class="input-field col s3">
-          <input id="cantidad" type="text" class="validate">
-          <label for="cantidad">Cantidad</label>
-        </div>
-        <div class="col s6">
-          <div class="file-field input-field">
-            <div class="btn">
-                <span>Selecionar Imagen</span>
-                <input type="file" id="file">
-            </div>
-             <div class="file-path-wrapper">
-                <input class="file-path validate" type="text">
-              </div>
-            </div>
-          </div>
-      </div>      
-      <div class="row">
-        <div class="input-field col s6">
-          <input id="id" type="text" class="validate">
-          <label for="id">id</label>
-        </div>
-        <div class="input-field col s6">
-          <a id="guardar" class="waves-effect waves-light btn">Guardar</a>
-        </div>
-      </div>      
-    </form>
-  </div>
-  </div>
-  <div id="ver123"></div>
-  `
-  var main = document.querySelector('#actualizar')
-  main.innerHTML = html
+
+
+function update1(){  
+  let doc = document;
+  let key  = doc.getElementById('actualizar').getAttribute('key')
+
+  let nombre1  = doc.querySelector('#nombre').value
+  let marca1  = doc.querySelector('#marca').value
+  let precio1  = doc.querySelector('#precio').value
+  let vencimiento1  = doc.querySelector('#vencimiento').value
+  let descripcion1  = doc.querySelector('#descripcion').value
+  let cantidad1  = doc.querySelector('#cantidad').value
+  let Imagen1  = doc.getElementById('actualizar').getAttribute('img')
+
+
+ 
+
+var updates = {};
+
+var postData = {
+    id: key,
+    name: nombre1,
+    marca: marca1,
+    precio: precio1,
+    fecha_Vencimiento: vencimiento1,
+    cantidad: cantidad1,
+    descripcion:descripcion1,
+    img: Imagen1
+};
+
+
+console.log(postData)
+
+updates['/Productos/' + key] = postData;
+
+console.log(updates)
+
+firebase.database().ref().update(updates);
+
+page.redirect('/productos')
 }
+
+
