@@ -85,7 +85,7 @@ var formTemplate = `  <div class="row">
           </div>
       </div>      
       <div class="row">
-        <div class="input-field col s6">
+        <div id="ocultar" class="input-field col s6" >
           <input id="id" type="text" class="validate">
           <label for="id">id</label>
         </div>
@@ -125,7 +125,7 @@ function guardar (e)  {
 			img: imgURL
 		})
 
-		//page.redirect('/homepage')
+		page.redirect('/guardar')
 
 
 	})

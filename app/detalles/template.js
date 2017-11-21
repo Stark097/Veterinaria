@@ -26,8 +26,7 @@ const templateDetalle = (invent) => {
               <p><strong>Marca:</strong> ${invent.marca}</p>
             </div>
           </div>
-          <a id="eliminar" key="${invent.id}" class="waves-effect waves-light btn">Eliminar</a>
-          <a class="waves-effect waves-light btn"  id="actualizar" class ="button" key="${invent.id}" img="${invent.img}">Modificar</a>
+         
         </div>
         <div class="col s12 m6">
          <div class="row">
@@ -81,7 +80,12 @@ const templateDetalle = (invent) => {
   <div id="ver123"></div>
         </div>        
       </div>
-
+  <div class="row">
+    <div class="col s12" id="botones">
+     <a id="eliminar" key="${invent.id}" class="waves-effect waves-light btn">Eliminar</a>
+     <a class="waves-effect waves-light btn"  id="actualizar" class ="button" key="${invent.id}" img="${invent.img}">Modificar</a>
+    <div> 
+  </div>
   `
 
 }

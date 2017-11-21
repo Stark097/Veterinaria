@@ -60,7 +60,7 @@ var db = firebase.database()
 
   console.log(confirmar)
 
-  if (key!=null && confirma == true) {
+  if (key!=null && confirmar == true) {
     var ref = db.ref("Productos")
     ref.child(key).remove()
 
