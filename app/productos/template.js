@@ -16,7 +16,7 @@ const template = (datos) => {
   })
 
   let table = `
-  <table class="striped">
+  <table class="highlight">
     <thead>
       <tr>
         <!--<th>#</th>-->
@@ -33,7 +33,7 @@ const template = (datos) => {
   let card = `
   <div class="row">
     <div class="col s12">
-      <div class="card">
+      <div class="card tarjeta">
         <div class="card-content">
           <span class="card-title">Lista de Productos</span>
           ${table}

@@ -9,7 +9,9 @@ h6{
 
 
 body{
-	background: #b2dfdb;
+	 background-image: url(https://firebasestorage.googleapis.com/v0/b/bd-veterinaria.appspot.com/o/fondo.jpg?alt=media&token=12f20ac7-24a9-4c82-bd47-ae2a48b8e27a);
+	 width: 100%;
+    height: auto
 }
 
 #contacto {

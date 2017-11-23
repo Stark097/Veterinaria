@@ -3,7 +3,7 @@ const templateDetalle = (invent) => {
   return `
       <div class="row">
         <div class="col s12 m6">
-          <div class="card">
+          <div class="card tarjeta">
             <div class="card-content">
               <span class="card-title">${invent.name}</span>
               ${
@@ -28,7 +28,7 @@ const templateDetalle = (invent) => {
           </div>
          
         </div>
-        <div class="col s12 m6">
+        <div class="col s12 m6">  
          <div class="row">
     <form class="col s12">
       <div class="row">

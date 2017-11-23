@@ -43,7 +43,13 @@ db.ref('Productos').once('value').then(obtenerDatos)
 
 
 
-var formTemplate = `  <div class="row">
+var formTemplate = `
+<div class="row">
+    <div class="col s12">
+      <div class="card tarjeta" >
+        <div class="card-content">
+          <span class="card-title" style="color:white">Ingresar Nuevos Productos</span>
+          <div class="row">
     <form class="col s12">
       <div class="row">
         <div class="input-field col s3">
@@ -96,6 +102,13 @@ var formTemplate = `  <div class="row">
     </form>
   </div>
   </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  
   <div id="ver123"></div>
   `
 

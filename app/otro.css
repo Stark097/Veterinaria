@@ -17,3 +17,18 @@ body {
 	width: 200px;
 } 
 
+#nav_color{
+	background-color: rgba(160, 178, 142, 0.3)
+}
+
+nav ul a{
+	color:white;
+}
+
+nav .brand-logo{
+	color:white;
+}
+
+.tarjeta{
+	background-color: rgba(160, 178, 142, 0.3)	
+}
