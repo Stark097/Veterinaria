@@ -4,7 +4,6 @@ import page from 'page'
 import layout from './../layout'
 import config from './../config'
 var firebase = require('firebase')
-var validar
 if (!firebase.apps.length) { 
 	firebase.initializeApp(config) 
 }
@@ -107,3 +106,4 @@ function logout (e) {
 			console.log(err.message)
 	})
 }
+
