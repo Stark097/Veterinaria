@@ -32,3 +32,13 @@ nav .brand-logo{
 .tarjeta{
 	background-color: rgba(160, 178, 142, 0.3)	
 }
+
+
+#hover tr:hover
+{
+background-color: rgba(0, 17, 0, 0.3);
+}
+
+.letra{
+  color:white;
+}

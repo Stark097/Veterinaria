@@ -1,7 +1,7 @@
 import page from 'page'
 import layout from './../layout'
 import config from './../config'
-var templateLista = require('./../productos/template')
+var templateLista = require('./../productos2/template')
 var firebase = require('firebase')
 
 
@@ -48,7 +48,7 @@ var formTemplate = `
     <div class="col s12">
       <div class="card tarjeta" >
         <div class="card-content">
-          <span class="card-title" style="color:white">Ingresar Nuevos Productos</span>
+          <span class="card-title letra" >Ingresar Nuevos Productos</span>
           <div class="row">
     <form class="col s12">
       <div class="row">

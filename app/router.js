@@ -6,6 +6,8 @@ import acercade from './acercade'
 import login from './login'
 require('./productos')
 require('./detalles')
+require('./detalles2')
+require('./detalles2/index2.js')
 require('./guardar')
 
 

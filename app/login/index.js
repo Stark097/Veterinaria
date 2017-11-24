@@ -4,17 +4,17 @@ import page from 'page'
 import layout from './../layout'
 import config from './../config'
 var firebase = require('firebase')
-
+var validar
 if (!firebase.apps.length) { 
 	firebase.initializeApp(config) 
 }
 
 // template
 var loginTemplate = `
-<h4 class="card-title center">Sing in / Sing up</h4>
+<h4 class="card-title center">Iniciar Sesión</h4>
          	<div class="row">
 	         	<div class="row center">
-	         		<a id="googleLogin" class="waves-effect waves-light btn red darken-1">Login con Google</a>
+	         		<a id="googleLogin" class="waves-effect waves-light btn red darken-1">Inicia con tu cuenta de Google</a>
 	         	</div>
          	</div>`
 
@@ -31,7 +31,7 @@ var template = `
 page('/login', () => {
 	var main = document.querySelector('main')
 
-  main.innerHTML = template
+  main.innerHTML = layout(template)
 
   var btnLogin = document.querySelector('#googleLogin')
   if (btnLogin) btnLogin.addEventListener('click', login)
@@ -39,7 +39,7 @@ page('/login', () => {
 
 // login
 function login (e) {
-	e.preventDefault()
+	/*e.preventDefault()
 
 	let provider = new firebase.auth.GoogleAuthProvider()
 
@@ -57,7 +57,40 @@ function login (e) {
 			var btnSalir = document.querySelector('#salir')
 			btnSalir.addEventListener('click', logout)
 		})
-		.catch((err) => console.error(err.message) )
+		.catch((err) => console.error(err.message+"Error al iniciar sesión") )*/
+
+		var provider = new firebase.auth.GoogleAuthProvider();
+
+		firebase.auth().signInWithPopup(provider).then(function(result) {
+		  // This gives you a Google Access Token. You can use it to access the Google API.
+		  //var token = result.credential.accessToken;
+		  // The signed-in user info.
+		  //var user = result.user;
+		  // ...
+		  let user = result.user.providerData[0]
+		  let loginContainer = document.querySelector('#nav_color')
+
+			let html = `Bienvenido, ${user.displayName} <img style="height: 50px; border-radius: 50%;" class="photoURL" src=${user.photoURL} alt=${user.displayName} />`
+			loginContainer.innerHTML = `
+				${html}
+				<li><a id="salir" href="!#">Salir</a></li>`
+
+			var btnSalir = document.querySelector('#salir')
+			btnSalir.addEventListener('click', logout)
+			validar = 1
+		  console.log("inicio exitoso "+validar)
+		}).catch(function(error) {
+		  // Handle Errors here.
+		  //var errorCode = error.code;
+		  //var errorMessage = error.message;
+		  // The email of the user's account used.
+		  //var email = error.email;
+		  // The firebase.auth.AuthCredential type that was used.
+		  //var credential = error.credential;
+		  // ...
+		  validar = 0
+		  console.log("Error al iniciar sesión "+validar)		  
+		});
 }
 
 // cerrar sesión

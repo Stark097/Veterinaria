@@ -2,30 +2,33 @@ import page from 'page'
 import layout from './../layout'
 import config from './../config'
 var firebase = require('firebase')
-var templateDetalle = require('./template')
+var templateLista = require('./template')
 
+page('/productos2', mostrarLoader, function () {
+	var main = document.querySelector('main')
+	
+if (!firebase.apps.length) { 
+	firebase.initializeApp(config) 
+}
 
-page('/detalles/:name', mostrarLoader, function (ctx, next) {    
+var db = firebase.database()
 
-  if (!firebase.apps.length) { 
-    firebase.initializeApp(config)     
-  }
+function obtenerDatos (datos) {
+	var arrayDatos = datos.val()
 
-  var db = firebase.database()
+	var main = document.querySelector('main')
 
-  db.ref('/Productos/' + ctx.params.name).once('value').then(snapshot => {
-    
-    let item = snapshot.val()
-    var main = document.querySelector('main')
-    item.id = ctx.params.name
+	var html =  templateLista(arrayDatos)
+	
+	main.innerHTML = layout(html)
+}
 
-    var html =  templateDetalle(item)   
-    main.innerHTML = layout(html) 
-  })  
+db.ref('Productos').once('value').then(obtenerDatos)
 })
 
 function mostrarLoader (ctx, next) {
 	var html = `
+	<div id="cargar">
 	  <div class="preloader-wrapper big active">
     <div class="spinner-layer spinner-blue-only">
       <div class="circle-clipper left">
@@ -36,9 +39,9 @@ function mostrarLoader (ctx, next) {
         <div class="circle"></div>
       </div>
     </div>
+  </div>
   </div>`
   var main = document.querySelector('main')
   main.innerHTML = layout(html)
   next()
 }
-

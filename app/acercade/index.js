@@ -1,5 +1,5 @@
 const collap = `
-  <div>
+  <div  class="letra">
     <h5 class="center-align">
       Nuestros Servicios
     </h5>
@@ -23,6 +23,6 @@ const collap = `
   </div>
   `
 
-const acercade = `<h1>Acerca de nosotros</h1> ${collap}`
+const acercade = `<h1  class="letra" >Acerca de nosotros</h1> ${collap}`
 
 export default acercade

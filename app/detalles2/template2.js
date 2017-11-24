@@ -1,4 +1,4 @@
-const template = (datos) => {
+/*const template = (datos) => {
   let rows = ''
   let countRow = 1
   let keys = Object.keys(datos)
@@ -8,7 +8,7 @@ const template = (datos) => {
     rows +=  `
      <tr>
       <!--<td>${countRow++}</td>-->
-      <td><a href="/detalles/${key}"  class="letra">${item.name}</a></td>
+      <td><a href="/detalles2/template/${key}"  class="letra">${item.name}</a></td>
       <td>${item.cantidad}</td>
       <td>${item.precio}</td>
     </tr>
@@ -45,4 +45,4 @@ const template = (datos) => {
   return card
 }
 
-module.exports = template
+module.exports = template*/

@@ -8,7 +8,7 @@ const template = (datos) => {
     rows +=  `
      <tr>
       <!--<td>${countRow++}</td>-->
-      <td><a href="/detalles/${key}"  class="letra">${item.name}</a></td>
+      <td><a href="/detalles2/${key}"  class="letra">${item.name}</a></td>
       <td>${item.cantidad}</td>
       <td>${item.precio}</td>
     </tr>
@@ -22,7 +22,7 @@ const template = (datos) => {
         <!--<th>#</th>-->
         <th>Nombre</th>
         <th>Cantidad</th>
-        <th>precio</th>
+        <th>Precio</th>
       </tr>
     </thead>
     <tbody id="hover">

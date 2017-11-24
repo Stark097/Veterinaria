@@ -13,12 +13,12 @@ const table = `
     </ul>
   </div> 
 
-  <div>
+  <div  class="letra">
     <h5 class="center-align">Un poco de lo que hacemos
       <br/><br/>Actualmente el profesional de pequeños animales puede ejercer la actividad en Consultorios, Clínicas u Hospitales debidamente habilitados, en forma individual o formando equipos de trabajo, lo que resulta en una atención más eficiente e integral del paciente. Las actividades que se realizan en una veterinaria dedicada a pequeños animales es amplia y dependerá de cada profesional involucrado</h5>
   </div>
       `
 
-const homepage = `<h1>Bienvenidos</h1> ${table}`
+const homepage = `<h1  class="letra">Bienvenidos</h1> ${table}`
 
 export default homepage
