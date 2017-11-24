@@ -21,7 +21,7 @@ var loginTemplate = `
 var template = `
     <div class="row">
       <div class="col s12 l12">
-        <div class="card-panel login-container">
+        <div class="card-panel login-container tarjeta">
         	${loginTemplate}
         </div>
       </div>
@@ -68,12 +68,12 @@ function login (e) {
 		  //var user = result.user;
 		  // ...
 		  let user = result.user.providerData[0]
-		  let loginContainer = document.querySelector('#nav_color')
+		  let loginContainer = document.querySelector('.login-container')
 
-			let html = `Bienvenido, ${user.displayName} <img style="height: 50px; border-radius: 50%;" class="photoURL" src=${user.photoURL} alt=${user.displayName} />`
+			let html = `<div class="img_sesion"><img style="height: 50px; border-radius: 50%;" class="photoURL" src=${user.photoURL} alt=${user.displayName} /><span class="card-title letra" >${user.displayName}</span></div>`
 			loginContainer.innerHTML = `
 				${html}
-				<li><a id="salir" href="!#">Salir</a></li>`
+				<li class="letra"><a class="letra" id="salir" href="!#">Salir</a></li>`
 
 			var btnSalir = document.querySelector('#salir')
 			btnSalir.addEventListener('click', logout)

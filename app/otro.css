@@ -1,8 +1,4 @@
 
-#cargar{
-	text-align: center;
-}
-
 body {
     display: flex;
     min-height: 100vh;
@@ -17,7 +13,7 @@ body {
 	width: 200px;
 } 
 
-#nav_color{
+.nav_color{
 	background-color: rgba(160, 178, 142, 0.3)
 }
 
@@ -41,4 +37,44 @@ background-color: rgba(0, 17, 0, 0.3);
 
 .letra{
   color:white;
+}
+
+.preloader{
+  margin: 25%;
+  text-align: center;
+
+}
+
+.detalles{
+  margin: 25%;  
+
+}
+
+.side-nav{
+  padding-top: 50px;
+
+}
+
+.side-nav li>a{
+  color:white;
+}
+
+.side-nav li:hover{
+  background-color: rgba(0, 17, 0, 0.3);;
+}
+
+.dropdown-content li>a, .dropdown-content li>span{
+  color:white; 
+}
+
+.dropdown-content li:hover{
+  background-color: rgba(0, 17, 0, 0.3);; 
+}
+
+.dropdown-content{
+  padding-top: 50px;
+}
+
+.img_sesion{
+  
 }

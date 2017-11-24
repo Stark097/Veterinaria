@@ -31,7 +31,7 @@ page('/detalles2/:name', mostrarLoader, function (ctx, next) {
 
 function mostrarLoader (ctx, next) {
 	var html = `
-	  <div class="preloader-wrapper big active">
+	  <div class="preloader-wrapper big active preloader">
     <div class="spinner-layer spinner-blue-only">
       <div class="circle-clipper left">
         <div class="circle"></div>

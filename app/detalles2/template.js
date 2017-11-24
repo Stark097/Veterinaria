@@ -2,7 +2,7 @@ const templateDetalle = (invent) => {
   return `
       <div class="row">
         <div class="col s12 m6">
-          <div class="card tarjeta">
+          <div class="card tarjeta ">
             <div class="card-content letra" >
               <span class="card-title">${invent.name}</span>
               ${
