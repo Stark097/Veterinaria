@@ -21,7 +21,14 @@ page('/detalles/:name', mostrarLoader, function (ctx, next) {
 
     var html =  templateDetalle(item)   
     main.innerHTML = layout(html) 
-  })  
+    $( document ).ready(function(){
+        $(".button-collapse").sideNav();
+        $(".dropdown-button").dropdown({           
+            belowOrigin: true, // Displays dropdown below the button   
+            float: true
+        });
+      })
+  })    
 })
 
 function mostrarLoader (ctx, next) {

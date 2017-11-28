@@ -1,0 +1,80 @@
+{
+  "Usuarios": {
+    "v1" : {
+      "nickname" : "omb94",
+      "contraseña" : "marialoca123"     
+    }
+  },
+    "Detalles_Usuarios": {
+    "v1" : {
+      "nombres" : "Omar Napoleon",
+      "apellidos" : "Medina Bermudez",
+      "img" : ""     
+    }
+  },
+  "Productos" : {
+    "-KzR5CNKwBLnhK1ymMaD" : {
+      "cantidad" : "50",
+      "descripcion" : "Para todo",
+      "fecha_Vencimiento" : "31/12/2017",
+      "img" : "https://firebasestorage.googleapis.com/v0/b/bd-veterinaria.appspot.com/o/parcetamol.jfif?alt=media&token=b5908b26-ef2b-4357-9f42-0cbcd951d381",
+      "marca" : "Bayer",
+      "name" : "Paracetamol",
+      "precio" : "20"
+    },
+    "-KzjiYJVI0W4QxeSMSgZ" : {
+      "cantidad" : "6",
+      "descripcion" : "5",
+      "fecha_Vencimiento" : "4",
+      "img" : "https://firebasestorage.googleapis.com/v0/b/bd-veterinaria.appspot.com/o/panadol.jfif?alt=media&token=0933780a-60f4-4581-8a08-4d7f8c598cae",
+      "marca" : "2",
+      "name" : "panadol",
+      "precio" : "3"
+    },
+    "V1" : {
+      "cantidad" : 100,
+      "descripcion" : "shampoo antipulgas y garrapatas, uso externo",
+      "fecha_Vencimiento" : 200819,
+      "img" : "https://firebasestorage.googleapis.com/v0/b/bd-veterinaria.appspot.com/o/shampoo.jpg?alt=media&token=bc0e2fe6-3fac-4e8f-b96b-f3895e634dc1",
+      "marca" : "SuperPet",
+      "name" : "Shampoo",
+      "precio" : 110
+    },
+    "V2" : {
+      "cantidad" : "100",
+      "descripcion" : "Jabon Antipulgas",
+      "fecha_Vencimiento" : "201220",
+      "img" : "https://firebasestorage.googleapis.com/v0/b/bd-veterinaria.appspot.com/o/jabonppt.jpg?alt=media&token=71e08847-61b0-4188-97f5-61d411ff3cc2",
+      "marca" : "PPT",
+      "name" : "Jabon",
+      "precio" : "85"
+    },
+    "V3" : {
+      "cantidad" : 90,
+      "descripcion" : "suplemento para Gatos",
+      "fecha_Vencimiento" : 230619,
+      "img" : "https://firebasestorage.googleapis.com/v0/b/bd-veterinaria.appspot.com/o/gati.jpg?alt=media&token=68c200de-73c8-4973-a4f8-7c25ad2c3344",
+      "marca" : "Gati",
+      "name" : "Comida para Gatos 1.5KG",
+      "precio" : 180
+    },
+    "V4" : {
+      "cantidad" : 120,
+      "descripcion" : "de uso externo, requiere mezclarse 1c c/litro de agua",
+      "fecha_Vencimiento" : 220520,
+      "img" : "https://firebasestorage.googleapis.com/v0/b/bd-veterinaria.appspot.com/o/nuvan.jpg?alt=media&token=29e3429c-c856-4296-9e73-a1727ae19eb0",
+      "marca" : "NUVAN",
+      "name" : "Liquido para Fumigar",
+      "precio" : 220
+    },
+    "V5" : {
+      "cantidad" : 120,
+      "descripcion" : "Antibiótico de amplio espectro con inhibidor de resistencia bacteriana",
+      "fecha_Vencimiento" : 220520,
+      "img" : "https://firebasestorage.googleapis.com/v0/b/bd-veterinaria.appspot.com/o/amoxi-tabs-c-250.jpg?alt=media&token=c5803c4c-da94-4ffd-b4b1-1d594daea71a",
+      "marca" : "Amoxi-Tabs",
+      "name" : "Amoxi Tabs C-250, Tableta oral",
+      "precio" : 220
+    }  
+  }  
+}

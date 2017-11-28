@@ -15,6 +15,7 @@ page('/guardar', mostrarLoader, function () {
 	var main = document.querySelector('main')
 
   main.innerHTML = layout(formTemplate)
+
   var guardarBtn = document.querySelector('#guardar')
   guardarBtn.addEventListener('click', guardar)
 
@@ -38,6 +39,13 @@ function obtenerDatos (datos) {
 }
 
 db.ref('Productos').once('value').then(obtenerDatos)
+$( document ).ready(function(){
+        $(".button-collapse").sideNav();
+        $(".dropdown-button").dropdown({           
+            belowOrigin: true, // Displays dropdown below the button   
+            float: true
+        });
+      })
 })
 
 

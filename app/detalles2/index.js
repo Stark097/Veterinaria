@@ -24,9 +24,15 @@ page('/detalles2/:name', mostrarLoader, function (ctx, next) {
     var btn_elimar = document.querySelector('#eliminar')
     btn_elimar.addEventListener('click', eliminar)
     var btn_actualizar = document.querySelector('#actualizar')
-    btn_actualizar.addEventListener('click', update1)        
-      
-  })  
+    btn_actualizar.addEventListener('click', update1)  
+    $( document ).ready(function(){
+        $(".button-collapse").sideNav();
+        $(".dropdown-button").dropdown({           
+            belowOrigin: true, // Displays dropdown below the button   
+            float: true
+        });
+      })      
+  })    
 })
 
 function mostrarLoader (ctx, next) {

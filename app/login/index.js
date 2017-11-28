@@ -34,6 +34,14 @@ page('/login', () => {
 
   var btnLogin = document.querySelector('#googleLogin')
   if (btnLogin) btnLogin.addEventListener('click', login)
+
+  	$( document ).ready(function(){
+	  		$(".button-collapse").sideNav();
+	  		$(".dropdown-button").dropdown({	  			 
+			      belowOrigin: true, // Displays dropdown below the button   
+			      float: true
+	  		});
+	  	})
 })
 
 // login

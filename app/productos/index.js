@@ -81,7 +81,8 @@ import config from './../config'
 var firebase = require('firebase')
 var templateLista = require('./template')
 
-page('/productos', mostrarLoader, function () {
+page('/productos', mostrarLoader, () => {
+  
 	var main = document.querySelector('main')
 	
 if (!firebase.apps.length) { 
@@ -98,9 +99,16 @@ function obtenerDatos (datos) {
 	var html =  templateLista(arrayDatos)
 	
 	main.innerHTML = layout(html)
+  $( document ).ready(function(){
+        $(".button-collapse").sideNav();
+        $(".dropdown-button").dropdown({           
+            belowOrigin: true, // Displays dropdown below the button   
+            float: true
+        });
+      })
 }
-
 db.ref('Productos').once('value').then(obtenerDatos)
+
 })
 
 function mostrarLoader (ctx, next) {

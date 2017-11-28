@@ -4,7 +4,7 @@ import config from './../config'
 var firebase = require('firebase')
 var templateLista = require('./template')
 
-page('/productos2', mostrarLoader, function () {
+page('/productos2', mostrarLoader, () => {
 	var main = document.querySelector('main')
 	
 if (!firebase.apps.length) { 
@@ -21,6 +21,13 @@ function obtenerDatos (datos) {
 	var html =  templateLista(arrayDatos)
 	
 	main.innerHTML = layout(html)
+  $( document ).ready(function(){
+        $(".button-collapse").sideNav();
+        $(".dropdown-button").dropdown({           
+            belowOrigin: true, // Displays dropdown below the button   
+            float: true
+        });
+      })
 }
 
 db.ref('Productos').once('value').then(obtenerDatos)
