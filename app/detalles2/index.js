@@ -31,8 +31,16 @@ page('/detalles2/:name', mostrarLoader, function (ctx, next) {
             belowOrigin: true, // Displays dropdown below the button   
             float: true
         });
-      })      
-  })    
+      })  
+      $('.datepicker').pickadate({
+    selectMonths: true, // Creates a dropdown to control month
+    selectYears: 15, // Creates a dropdown of 15 years to control year,
+    today: 'Today',
+    clear: 'Clear',
+    close: 'Ok',
+    closeOnSelect: false // Close upon selecting a date,
+  });    
+  })      
 })
 
 function mostrarLoader (ctx, next) {

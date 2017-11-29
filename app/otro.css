@@ -80,6 +80,7 @@ background-color: rgba(0, 17, 0, 0.3);
 }
 
 
+/*color barra input*/
 /*input:required:invalid {
  
 border: 1px solid red;
@@ -95,3 +96,32 @@ border: 1px solid green;
 .datepicker{
  color:white;  
 }
+
+/*placeholder*/
+/*.input-field label {
+     color: yellow;
+   }*/
+   /* label focus color */
+   /*.input-field input[type=text]:focus + label {
+     color: white;
+   }*/
+   /* label underline focus color */
+   /*.input-field input[type=email]:focus {
+     border-bottom: 1px solid white;
+     box-shadow: 0 1px 0 0 white;
+   }*/
+   /*  color valid */
+   /*.input-field input[type=text].valid {
+     border-bottom: 1px solid green;
+     box-shadow: 0 1px 0 0 green;
+   }*/
+   /* color invalid linea */
+   /*.input-field input[type=email].invalid {
+     border-bottom: 1px solid red;
+     box-shadow: 0 1px 0 0 red;
+   }*/
+   /* icon prefix focus color */
+   /*.input-field .prefix.active {
+     color: black ;
+   }*/
+

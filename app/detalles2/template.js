@@ -45,11 +45,11 @@ const templateDetalle = (invent) => {
       </div>
       <div class="row">
         <div class="input-field col s6">
-          <input id="precio" type="text" class="validate">
-          <label for="precio">Precio</label>
+          <input id="precio"  class="validate">
+          <label for="number">Precio</label>
         </div>        
         <div class="input-field col s6">
-          <input id="vencimiento" type="text" class="validate">
+         <input type="text" class="datepicker" id="vencimiento" >
           <label for="vencimiento">Fecha Vencimiento</label>
         </div>
       </div>
@@ -59,7 +59,7 @@ const templateDetalle = (invent) => {
           <label for="descripcion">Descripcion</label>
         </div>
         <div class="input-field col s6">
-          <input id="cantidad" type="text" class="validate">
+          <input id="cantidad" type="number" class="validate">
           <label for="cantidad">Cantidad</label>
         </div>
       </div>

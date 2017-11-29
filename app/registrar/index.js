@@ -11,6 +11,7 @@ page('/registrar',()=>{
 	main.innerHTML=layout(template);
 
 	 $(document).ready(function(){
+	 	  $('.chips').material_chip();
 	      $('.slider').slider();
 	      	$(".button-collapse").sideNav();
 	      	$(".dropdown-button").dropdown({	  			 

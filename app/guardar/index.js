@@ -61,11 +61,11 @@ $('.datepicker').pickadate({
 
 
 var formTemplate = `
-<div class="row">
+<div class="row letra">
     <div class="col s12">
       <div class="card tarjeta" >
         <div class="card-content">
-          <span class="card-title letra" >Ingresar Nuevos Productos</span>
+          <span class="card-title" >Ingresar Nuevos Productos</span>
           <div class="row">
     <form class="col s12">
       <div class="row">
@@ -77,8 +77,8 @@ var formTemplate = `
           <input id="marca" type="text" class="validate">
           <label for="marca">Marca</label>
         </div>
-        <div class="input-field col s3">
-          <input id="precio" type="text" class="validate">
+        <div class="input-field col s3" >
+          <input id="precio" type="number" class="validate" >
           <label for="precio">Precio</label>
         </div>        
         <div class="input-field col s3">
@@ -93,7 +93,7 @@ var formTemplate = `
           <label for="descripcion">Descripcion</label>
         </div>
         <div class="input-field col s3">
-          <input id="cantidad" type="text" class="validate">
+          <input id="cantidad" type="number" class="validate">
           <label for="cantidad">Cantidad</label>
         </div>
         <div class="col s6">
