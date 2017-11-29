@@ -46,6 +46,15 @@ $( document ).ready(function(){
             float: true
         });
       })
+  
+$('.datepicker').pickadate({
+    selectMonths: true, // Creates a dropdown to control month
+    selectYears: 15, // Creates a dropdown of 15 years to control year,
+    today: 'Today',
+    clear: 'Clear',
+    close: 'Ok',
+    closeOnSelect: false // Close upon selecting a date,
+  });
 })
 
 
@@ -73,7 +82,8 @@ var formTemplate = `
           <label for="precio">Precio</label>
         </div>        
         <div class="input-field col s3">
-          <input id="vencimiento" type="text" class="validate">
+          <!--<input id="vencimiento" type="text" class="validate">-->
+          <input type="text" class="datepicker" id="vencimiento" >
           <label for="vencimiento">Fecha Vencimiento</label>
         </div>
       </div>
@@ -177,3 +187,4 @@ function mostrarLoader (ctx, next) {
   main.innerHTML = layout(html)
   next()
 }
+

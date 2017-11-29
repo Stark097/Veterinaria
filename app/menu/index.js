@@ -32,11 +32,11 @@ const menu = `
 
     <ul data-beloworigin="true" id="dropdown1" class="dropdown-content nav_color" >
       <li><a href="/login">Iniciar</a></li>
-      <li><a href="/login">Registrarse</a></li>
+      <li><a href="/registrar">Registrarse</a></li>
     </ul>
     <ul id="mobil-dropdown1" class="dropdown-content nav_color">
       <li><a href="/login">Iniciar</a></li>
-      <li><a href="/login">Registrarse</a></li>
+      <li><a href="/registrar">Registrarse</a></li>
     </ul>
 
 `

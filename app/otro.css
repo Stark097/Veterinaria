@@ -78,3 +78,20 @@ background-color: rgba(0, 17, 0, 0.3);
 .img_sesion{
   
 }
+
+
+/*input:required:invalid {
+ 
+border: 1px solid red;
+ 
+}
+ 
+input:required:valid {
+ 
+border: 1px solid green;
+ 
+}*/
+
+.datepicker{
+ color:white;  
+}

@@ -10,6 +10,7 @@ require('./detalles2')
 require('./detalles2/index2.js')
 require('./guardar')
 require('./menu')
+require('./registrar')
 
 
 
